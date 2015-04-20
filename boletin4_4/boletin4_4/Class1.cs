@@ -15,15 +15,39 @@ namespace Ejercicio_4_4_X
             this.pesoRamonCaamano = peso;
         }
 
-        public int pesoRamonCaamano;
-        public int alturaRamonCaamano;
-        public string colorOjosRamonCaamano;
-        public string colorPeloRamonCaamano;
+        private int pesoRamonCaamano;
+
+        public int PesoRamonCaamano
+        {
+            get { return pesoRamonCaamano; }
+            set { pesoRamonCaamano = value; }
+        }
+        private int alturaRamonCaamano;
+
+        public int AlturaRamonCaamano
+        {
+            get { return alturaRamonCaamano; }
+            set { alturaRamonCaamano = value; }
+        }
+        private string colorOjosRamonCaamano;
+
+        public string ColorOjosRamonCaamano
+        {
+            get { return colorOjosRamonCaamano; }
+            set { colorOjosRamonCaamano = value; }
+        }
+        private string colorPeloRamonCaamano;
+
+        public string ColorPeloRamonCaamano
+        {
+            get { return colorPeloRamonCaamano; }
+            set { colorPeloRamonCaamano = value; }
+        }
 
         public void PonerLentillasRamonCaamano(string colorLentillas)
         {
             if (ComprobarColorRamonCaamano(colorLentillas))
-                this.colorOjosRamonCaamano = colorLentillas;
+                this.ColorOjosRamonCaamano = colorLentillas;
         }
         public bool ComprobarColorRamonCaamano(string colorLentillas)
         {
@@ -31,7 +55,7 @@ namespace Ejercicio_4_4_X
         }
         public void EngordarRamonCaamano(int cantidad)
         {
-            int nuevo_peso = this.pesoRamonCaamano + cantidad;
+            int nuevo_peso = this.PesoRamonCaamano + cantidad;
 
             if (nuevo_peso > 180)
             {
@@ -39,14 +63,14 @@ namespace Ejercicio_4_4_X
             }
             else
             {
-                this.pesoRamonCaamano = nuevo_peso;
+                this.PesoRamonCaamano = nuevo_peso;
             }
 
         }
 
         public void AdelgazarRamonCaamano(int cantidad)
         {
-            int nuevo_peso = this.pesoRamonCaamano - cantidad;
+            int nuevo_peso = this.PesoRamonCaamano - cantidad;
 
             if (nuevo_peso < 40)
             {
@@ -54,7 +78,7 @@ namespace Ejercicio_4_4_X
             }
             else
             {
-                this.pesoRamonCaamano = nuevo_peso;
+                this.PesoRamonCaamano = nuevo_peso;
             }
         }
     }
