@@ -5,34 +5,57 @@ using System.Text;
 
 namespace Ejercicio_4_4_X
 {
-    class PersonaX
+    public class PersonaRamonCaamano
     {
-        public PersonaX(int altura, int peso, string colorOjos, string colorPelo)
+        public PersonaRamonCaamano(int altura, int peso, string colorOjos, string colorPelo)
         {
-            this.alturaX = altura;
-            this.colorOjosX = colorOjos;
-            this.colorPeloX = colorPelo;
-            this.pesoX = peso;
+            this.alturaRamonCaamano = altura;
+            this.colorOjosRamonCaamano = colorOjos;
+            this.colorPeloRamonCaamano = colorPelo;
+            this.pesoRamonCaamano = peso;
         }
 
-        public int pesoX;
-        public int alturaX;
-        public string colorOjosX;
-        public string colorPeloX;
+        public int pesoRamonCaamano;
+        public int alturaRamonCaamano;
+        public string colorOjosRamonCaamano;
+        public string colorPeloRamonCaamano;
 
-        public void PonerLentillasX(string colorLentillas)
+        public void PonerLentillasRamonCaamano(string colorLentillas)
         {
+            if (ComprobarColorRamonCaamano(colorLentillas))
+                this.colorOjosRamonCaamano = colorLentillas;
+        }
+        public bool ComprobarColorRamonCaamano(string colorLentillas)
+        {
+            return colorLentillas.Equals("azul") || colorLentillas.Equals("verde") || colorLentillas.Equals("marron");
+        }
+        public void EngordarRamonCaamano(int cantidad)
+        {
+            int nuevo_peso = this.pesoRamonCaamano + cantidad;
+
+            if (nuevo_peso > 180)
+            {
+                Console.WriteLine("Cantidad incorrecta");
+            }
+            else
+            {
+                this.pesoRamonCaamano = nuevo_peso;
+            }
 
         }
 
-        public void EngordarX(int cantidad)
+        public void AdelgazarRamonCaamano(int cantidad)
         {
+            int nuevo_peso = this.pesoRamonCaamano - cantidad;
 
-        }
-
-        public void AdelgazarX(double cantidad)
-        {
-
+            if (nuevo_peso < 40)
+            {
+                Console.WriteLine("Cantidad incorrecta");
+            }
+            else
+            {
+                this.pesoRamonCaamano = nuevo_peso;
+            }
         }
     }
 }
